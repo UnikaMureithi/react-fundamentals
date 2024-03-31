@@ -2,8 +2,12 @@ import React from 'react';
 
 function Button (){
 
+    function handleClick(){
+        alert('You clicked me!');
+    }
+
     return(
-        <button>New Button</button>
+        <button onClick={handleClick}>New Button</button>
     );
 }
 
