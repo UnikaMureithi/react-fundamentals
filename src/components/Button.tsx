@@ -1,17 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
 
-function Button (){
-    const [count, setCount] = useState(0);
+interface ButtonProps {
+  count: number;
+  onClick: () => void; // Explicitly defining the type of onClick
+}
 
-    function handleClick(){
-        //alert('You clicked me!');
-        setCount(count + 1);
-    }
-
-    return(
-        <button onClick={handleClick}>Clicked {count} times</button>
-    );
+function Button({ count, onClick }: ButtonProps) {
+  return (
+    <button onClick={onClick}>Clicked {count} times</button>
+  );
 }
 
 export default Button;
