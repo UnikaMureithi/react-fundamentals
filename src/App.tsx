@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Button from './components/Button';
 import AboutPage from './components/AboutPage';
+import List from './components/List';
 
 let content: any;
 let isLoggedIn;
@@ -21,7 +22,9 @@ function App() {
 
       <br />
       {content}
+      <br />
       
+      <List/>
     </div>
   );
 }
