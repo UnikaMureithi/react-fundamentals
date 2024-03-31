@@ -1,8 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Button from './components/Button';
 import AboutPage from './components/AboutPage';
+
+let content: any;
+let isLoggedIn;
+if (isLoggedIn){
+  content = <AboutPage />;
+} else{
+  content = <Button />;
+}
+
 
 function App() {
   return (
@@ -10,6 +18,10 @@ function App() {
       <h1 className='h1'>Hello! This is my first button</h1>
       <Button/>
       <AboutPage/>
+
+      <br />
+      {content}
+      
     </div>
   );
 }
